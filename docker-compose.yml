@@ -1,0 +1,8 @@
+version: "2.15.1"
+services:
+  django_app: 
+    build: .
+    ports: 
+      - "8000:8000"
+
+
