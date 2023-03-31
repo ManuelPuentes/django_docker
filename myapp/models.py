@@ -7,7 +7,7 @@ class User(models.Model):
 
 class Video(models.Model):
     title = models.CharField(max_length=100)
-    creator = models.ForeignKey(User, on_delete=models.CASCADE)
+    creator = models.CharField(max_length=100)
     popularity = models.IntegerField()
     likes_counter = models.IntegerField()
     url = models.TextField(2000)

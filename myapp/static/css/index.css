@@ -17,3 +17,16 @@ body{
     align-items: center;
     padding: 10px;
 }
+
+.comments{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+.entry{
+    padding: 1em;
+    text-align: justify;
+
+}
