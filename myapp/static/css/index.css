@@ -1,0 +1,19 @@
+body{
+
+    height: 100vh;
+    /* background-color: red; */
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form-header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}

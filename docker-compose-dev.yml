@@ -1,6 +1,6 @@
 version: "2.15.1"
 services:
-  django_app: 
+  django_app_2: 
     container_name: django_app
     build:
       context: .
