@@ -1,32 +1,36 @@
 body{
-
     height: 100vh;
-    /* background-color: red; */
-
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
+    overflow-y: auto;
 
 }
 
-.form-header {
+.video {
+    width: 200px;
+    aspect-ratio: 16 / 9;
+    background-color: lightblue;
+    margin: 10px;
+}
+
+#observer_target{
+    width: 10px; height: 10px; background-color: transparent ;
+    
+}
+
+
+body{
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
 }
 
-.comments{
-    display: flex;
-    width: 80%;
-    justify-content: center;
-    text-align: center;
-    margin: auto;
+.wrapper {
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2%;
 }
-.entry{
-    padding: 1em;
-    text-align: justify;
 
+
+.box{
+    background-color: black;
 }
+

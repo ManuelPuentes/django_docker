@@ -4,13 +4,8 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
-    path('login', views.login_method, name='login'),
-    path('signup', views.signup_method, name='signup'),
-    path('upload_video', views.upload_video, name='upload_video'),
-
-
-
-
-
+    path('youtube_api_v3_video_data/<str:page_token>', views.youtube_api_v3_video_data),
+    path('youtube_api_v3_channel_data/<str:channel_id>', views.youtube_api_v3_channel_data),
     path('watch_video/<str:video_id>/<str:channel_name>', views.watch_video ), 
+
 ]

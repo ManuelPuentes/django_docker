@@ -1,117 +1,18 @@
-{% load static %}
+{% extends 'layouts/base.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'css/index.css'%}" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+<script src="{% static 'js/index.js'%}"></script>
+{% endblock %} {% block body%}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<div class="wrapper" id="content">
+  <div id="observer_target" ></div> 
+</div>
 
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+     
+</div>
 
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="header">
-      <a href="#">
-        <img src="{% static 'imgs/logo.png' %}" class="youtube-logo" alt="" />
-      </a>
-      <form class="search-bar">
-        <input
-          class="search-input"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button type="submit" class="search-btn">
-          <img src="{% static 'imgs/magnify.svg' %}" />
-        </button>
-      </form>
-      <div class="menu-icons">
-        <a href="/upload_video">
-          <img src="{% static 'imgs/video-plus.svg' %}" alt="Upload Video" />
-        </a>
-        <a href="#">
-          <img src="{% static 'imgs/apps.svg' %}" alt="Apps" />
-        </a>
-        <a href="#">
-          <img src="{% static 'imgs/bell.svg' %} " alt="Notifications" />
-        </a>
-        <a href="/login">
-          <img
-            class="menu-channel-icon"
-            src="http:///unsplash.it/36/36?gravity=center"
-            alt="Your Channel"
-          />
-        </a>
-      </div>
-    </header>
-    <div class="categories">
-      <section class="category-section">
-        <button class="category active">All</button>
-        <button class="category">Category 1</button>
-        <button class="category">Category 2</button>
-        <button class="category">Category 3</button>
-        <button class="category">Category 4</button>
-        <button class="category">Category 5</button>
-        <button class="category">Category 6</button>
-        <button class="category">Category 7</button>
-        <button class="category">Category 8</button>
-        <button class="category">Category 9</button>
-      </section>
-    </div>
-    <div class="videos">
-      <section class="video-section">
-        {% for data in youtube_data %}
-
-        <article class="video-container">
-          <a
-            href="/watch_video/{{data.video_data.id}}/channel={{data.video_data.snippet.channelTitle}}"
-            class="thumbnail"
-            data-duration="12:24"
-          >
-            <img
-              class="thumbnail-image"
-              src="{{data.video_data.snippet.thumbnails.medium.url}}"
-            />
-          </a>
-
-          <p></p>
-          <div class="video-bottom-section">
-            <a href="https://www.youtube.com/channel/{{data.channel_data.id}}">
-              <img
-                class="channel-icon"
-                src="{{data.channel_data.snippet.thumbnails.default.url}}"
-              />
-            </a>
-            <div class="video-details">
-              <a href="#" class="video-title"
-                >{{data.video_data.snippet.title}}</a
-              >
-              <a href="#" class="video-channel-name"
-                >{{data.video_data.snippet.channelTitle}}</a
-              >
-              <div class="video-metadata">
-                <span>12K views</span>
-                •
-                <span>{{data.video_data.snippet.publishedAt}}</span>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        {% endfor %}
-      </section>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+{% endblock%}
