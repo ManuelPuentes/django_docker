@@ -1,0 +1,22 @@
+.content{
+    height: 100%;
+}
+
+.player-section{
+    display: flex;
+    justify-content: center;
+    height: 50%;
+}
+
+.player-section iframe{
+    height: 100%;
+    
+    aspect-ratio: 16/9;
+}
+
+.video_data{
+    height: 20%;
+
+    border: 1px solid red;
+    padding: 1em;
+}

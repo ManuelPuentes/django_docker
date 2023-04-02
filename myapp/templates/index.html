@@ -1,18 +1,16 @@
-{% extends 'layouts/base.html' %} {% load static %} {% block head %}
-<link rel="stylesheet" href="{% static 'css/index.css'%}" />
-<link
-  href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-  rel="stylesheet"
-/>
-<script src="{% static 'js/index.js'%}"></script>
-{% endblock %} {% block body%}
+{% extends 'layouts/base.html' %} {% load static %} 
 
-<div class="wrapper" id="content">
-  <div id="observer_target" ></div> 
-</div>
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/index.css'%}" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <script src="{% static 'js/index.js'%}"></script>
+{% endblock %} 
 
-
-     
-</div>
-
+{% block body%}
+  <div class="wrapper" id="content">
+    <div id="observer_target" ></div> 
+  </div>
 {% endblock%}

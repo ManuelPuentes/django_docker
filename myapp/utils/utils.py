@@ -22,7 +22,7 @@ def fetch_youtube_popular_videos(page):
         'key': api_key,
         'chart': 'mostPopular',
         'part': 'snippet',
-        'regionCode': 'US',
+        'regionCode': 'VE',
         'maxResults': 4 ,
     }
 

@@ -72,7 +72,7 @@ const fetch_data = async (a) =>{
             timestamp.innerText = new Date(element.snippet.publishedAt).toDateString()
             timestamp.id = `date-${ID}`
 
-            video_url.href = `/watch_video/video_id=${ID}/channel=${element.snippet.channelTitle}`
+            video_url.href = `/watch_video/${ID}/channel=${element.snippet.channelTitle}`
             video_url.id = `video-url-${ID}`
 
             id++;

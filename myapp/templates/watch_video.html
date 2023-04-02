@@ -1,8 +1,70 @@
-{% extends 'layouts/base.html' %} 
+{% extends 'layouts/base.html' %} {% load static %} {% block head %}
+<script src="{% static 'js/watch_video.js'%}"></script>
+<link rel="stylesheet" href="{% static 'css/index.css'%}" />
+<link rel="stylesheet" href="{% static 'css/watch_video.css'%}" />
+{% endblock %} {% block body %}
+
+<div class="content">
+
+  <div class="player-section">
+    <div id="player">
+      <iframe  src="https://www.youtube.com/embed/{{video_id}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="container video_data">
 
 
-{% block body %}
-<div>{{video_id}}</div>
-<div>{{channel_name}}</div>
+
+  </div>
+  
+  <div class="comments-section">
+    <div class="container comments">
+      <div class="col-12 pt-3 d-flex justify-content-start">
+        <span>10 Comentaios</span>
+        <spam class="px-sm-3">ordenar por</spam>
+      </div>
+      <div class="add-comment-container col-12 pt-3 d-flex justify-content-start">
+        <div class="min-user">M</div>
+        <textarea
+          class="add-comment mx-sm-3 mb-sm-3"
+          type="text"
+          name="comment"
+          id="comment"
+          placeholder="Agrega un comentario ..."
+        ></textarea>
+      </div>
+
+      <div class="comment">
+        <div class="col-12 pt-3 d-flex justify-content-start">
+          <div class="min-user">N</div>
+          <div class="comment mx-sm-3 mb-sm-3">
+            <div class="comment-header d-flex justify-content-between">
+              <small>
+                <span class="comment-user">Nombre del usuario</span>
+                <span class="comment-date">Hace 1 hora</span>
+              </small>
+            </div>
+            <div class="comment-body">
+              <p>Comentario</p>
+            </div>
+            <div class="comment-footer d-flex justify-content-between">
+              <span><span class="comment-like">👍</span><span>&nbsp;1</span></span>
+              <span class="comment-reply">Responder</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+  
+
+</div>
+
 
 {% endblock%}

@@ -13,7 +13,6 @@ body{
 
 #observer_target{
     width: 10px; height: 10px; background-color: transparent ;
-    
 }
 
 
@@ -33,4 +32,57 @@ body{
 .box{
     background-color: black;
 }
+
+
+.comments {
+
+    border: 1px solid grey;
+
+}
+
+.min-user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: magenta;
+    color: white;
+    display: flex;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .add-comment-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+  }
+  
+  .add-comment {
+    border: none;
+    border-bottom: #555 1px solid;
+    color: lightslategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .comment-user {
+    color: lightslategrey;
+  }
+  
+  .comment-like {
+    padding: 0.2em;
+    border-radius: 50% 50% 50% 50%;
+    cursor: pointer;
+  }
+  
+  .comment-reply, .comment-user, .comment-date {
+    cursor: pointer;
+  }
+  
+  .comment-like:hover {
+    background-color: #e2e2e290;
+  }
 
