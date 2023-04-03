@@ -33,21 +33,40 @@ body{
     background-color: black;
 }
 
+.comment{
 
-.comments {
+  width: 80%;
 
-    border: 1px solid grey;
+  border: 1px solid red;
+  margin-top: 1em;
+  padding: 0px;
+}
+
+
+.comments-section {
+
+  /* border: 1px solid grey; */
+
+
+  /* height: 100%; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+
 
 }
 
 .min-user {
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-color: magenta;
     color: white;
     display: flex;
     font-weight: bolder;
+    font-size: 40px;
     justify-content: center;
     align-items: center;
   }
@@ -60,13 +79,26 @@ body{
   
   .add-comment {
     border: none;
-    border-bottom: #555 1px solid;
+    border: #555 1px solid;
     color: lightslategrey;
     display: flex;
     justify-content: center;
+    width: 95%;
     align-items: center;
     flex: 1;
   }
+
+  .new-comment {
+
+    width: 80%;
+
+    border: 1px solid red;
+    margin-top: 1em;
+    padding: 2em;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
   
   .comment-user {
     color: lightslategrey;

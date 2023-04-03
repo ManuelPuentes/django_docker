@@ -1,28 +1,21 @@
 from django import forms
 
-class CreateNewTask(forms.Form):
+class UploadVideoForm(forms.Form):
+
     title = forms.CharField(
-        label="titulo de tarea", 
-        max_length=200,
+        label="video title", 
+        max_length=100,
     )
-    description = forms.CharField( 
-        label = "descripcion de la tarea",  
-        widget=forms.Textarea
+    src = forms.CharField(
+        label="youtube video id", 
+        max_length=100,
     )
-class SignUp(forms.Form):
-    name =  forms.CharField(
-        label="name", 
-        max_length=50,
-    )
-    lastname =  forms.CharField(
-        label="lastname", 
-        max_length=50,
-    )
-    email = forms.CharField(
-        label="email", 
-        max_length=80,
+    thumbnail = forms.CharField(
+        label="thumbnail", 
+        max_length=100,
     )
 
-    password = forms.CharField(widget=forms.PasswordInput())
-    
-    password2 = forms.CharField(widget=forms.PasswordInput())
+
+
+    def validate_data(self, request):
+        return True

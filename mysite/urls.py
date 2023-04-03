@@ -19,6 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('js-logs/', include('django_js_logger.urls')),
     path('', include('myapp.urls'))
 ]

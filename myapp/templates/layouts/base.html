@@ -25,16 +25,19 @@
               </button>
             </form>
             <div class="menu-icons">
-              <a href="#">
-                <img src="{% static 'imgs/video-plus.svg' %}" alt="Upload Video" />
-              </a>
+              {% if user.is_authenticated %}
+                <a href="/upload_video">
+                  <img src="{% static 'imgs/video-plus.svg' %}" alt="Upload Video" />
+                </a>
+              {% endif %}
+
               <a href="#">
                 <img src="{% static 'imgs/apps.svg' %} " alt="Apps" />
               </a>
               <a href="#">
                 <img src="{% static 'imgs/bell.svg' %} " alt="Notifications" />
               </a>
-              <a href="#">
+              <a href="/login">
                 <img class="menu-channel-icon" src="http:///unsplash.it/36/36?gravity=center" alt="Your Channel" />
               </a>
             </div>

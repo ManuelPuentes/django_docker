@@ -1,0 +1,10 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.form {
+    border: 1px solid lightgray;
+    padding: 2em;
+}
